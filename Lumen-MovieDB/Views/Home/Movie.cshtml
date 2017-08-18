@@ -1,0 +1,18 @@
+﻿@model Lumen_MovieDB.Models.Movies
+
+@{
+    ViewBag.Title = Model.MovieTitle;
+}
+<div class="row">
+    <div class="col-lg-2 feature-img">
+        <img src="/Content/Images/@Model.featuredImg" class="img-responsive" alt="@Model.MovieTitle" />
+    </div>
+    <div class="col-lg-8">
+        <h2>@Model.MovieTitle - (@Model.ReleaseYear)</h2>
+        <p>@Model.Description</p><small>@Model.MovieGenre</small>
+    </div>
+    
+</div>
+
+
+

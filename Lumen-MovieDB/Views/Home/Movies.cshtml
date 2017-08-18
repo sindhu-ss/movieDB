@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Lumen_MovieDB.Models.Movies>
+@{
+    ViewBag.Title = "Movies";
+}
+<h2>@ViewBag.Title</h2>
+<p>@ViewBag.Message</p>
+
+@if (!Model.Any())
+{
+    <p>Spooky!!! We don't have any movies yet.</p>
+}
+else
+{
+
+    <ul>
+        @foreach (var Movie in Model)
+        {
+            <li>@Html.ActionLink(Movie.MovieTitle, "Movie", "Home", new { id = Movie.Id }, null)</li>
+        }
+    </ul>
+
+}
+
