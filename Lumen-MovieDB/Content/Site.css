@@ -1,0 +1,82 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.form-control {
+    box-shadow:none;
+    border: 1px solid #ccc;
+}
+.jumbotron {
+    background-image: url(Images/bg.jpg);
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+
+    position: relative;
+}
+.central-search {
+    position:absolute;
+    top:60%;
+    right:40%;
+}
+.btn {
+    border-width: 0;
+    font-weight: 600;
+    letter-spacing:1px;
+    padding: 10px 12px;
+    margin-bottom: 0.5%;
+}
+.btn:hover {
+    border:0;
+    margin-top:0;
+    transform:scale(1.1,1.1);
+}
+.navbar {
+    border-bottom-width: 1px;
+}
+.form-group.align-element {
+    display: inline-block;
+    margin-left:10px;
+}
+.align-element > .col-lg-10 {
+    margin-top: -25px;
+}
+.feature-img img {
+   margin-top: 15px;
+}
+@media (max-width: 768px) {
+    .central-search {
+        right: 0;
+        left:0;
+        display: inline-block;
+    }
+}
+@media (min-width: 1200px) {
+    .align-element > .col-lg-10 {
+        margin-left: 180%;
+        margin-top: -10px;
+    }
+}

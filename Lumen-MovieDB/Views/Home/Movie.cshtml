@@ -1,0 +1,31 @@
+﻿@model Lumen_MovieDB.Models.Movies
+
+@{
+    ViewBag.Title = Model.MovieTitle;
+}
+<div class="row">
+    <div class="col-lg-2 feature-img">
+        <img src="/Content/Images/@Model.featuredImg" class="img-responsive" alt="@Model.MovieTitle" />
+    </div>
+    <div class="col-lg-8">
+        <h2>@Model.MovieTitle - (@Model.ReleaseYear)</h2>
+        <p>@Model.Description</p><small>@Model.MovieGenre</small>
+        <br />
+        <br />
+        <p>
+            @Html.TextBoxFor(x => x.Username, new { @placeholder = "Username", @class = "form-control" })<br />
+            @Html.TextAreaFor(x => x.Comment, new { @placeholder = "Add your Comment", @class = "form-control" })
+        </p>
+        <p><a class="btn btn-success" onclick="saveComments()">Save</a></p>
+        <h3>Comments:</h3>
+        <div id="comment-container">
+
+        </div>
+        
+
+    </div>
+    
+</div>
+
+
+
