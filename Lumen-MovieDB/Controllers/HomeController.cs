@@ -85,7 +85,7 @@ namespace Lumen_MovieDB.Controllers
 
             return View(movie);
         }
-     
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
