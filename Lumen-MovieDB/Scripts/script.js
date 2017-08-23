@@ -9,8 +9,11 @@
         contentType: "application/json",
 
         success: function (result) {
-            console.log(result);
+            $("#container").append("<b>" + result.Username + " : " +"</b><span>" + result.Comment + "</span><br />");
 
+            //clean up the form for next input
+            $("#Username").val("");
+            $("#Comment").val("");
         }
     })
 }
