@@ -86,6 +86,14 @@ namespace Lumen_MovieDB.Controllers
             return View(movie);
         }
 
+        public ActionResult AddComment(string Username, string Comment)
+        {
+            var movie = new Movies();
+            movie.Username = Username;
+            movie.Comment = Comment;
+            return Json(movie, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

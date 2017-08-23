@@ -10,7 +10,16 @@
     <div class="col-lg-8">
         <h2>@Model.MovieTitle - (@Model.ReleaseYear)</h2>
         <p>@Model.Description</p><small>@Model.MovieGenre</small>
+
+        <p>
+            @Html.TextBoxFor(x => x.Username, new { @class = "form-control", @placeholder = "Username"})
+        </p>
+        <p>
+            @Html.TextAreaFor(x => x.Comment, new { @class = "form-control", @placeholder = "Comment" })
+        </p>
+        <p><a class="btn btn-success" onclick="saveComment()">Save</a></p>
     </div>
+
     
 </div>
 
