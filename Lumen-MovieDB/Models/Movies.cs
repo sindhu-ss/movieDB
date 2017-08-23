@@ -13,8 +13,5 @@ namespace Lumen_MovieDB.Models
         public string Description { get; set; }
         public string MovieGenre { get; set; }
         public string featuredImg { get; set; }
-
-        public string Username { get; set; }
-        public string Comment { get; set; }
     }
 }
